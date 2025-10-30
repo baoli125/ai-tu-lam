@@ -1,0 +1,4 @@
+project_id = "njbqumutdohkmfyuvial"
+
+[functions.policy-chat]
+verify_jwt = false
