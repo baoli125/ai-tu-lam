@@ -12,20 +12,22 @@ export const ChatMessage = ({ role, content }: ChatMessageProps) => {
   return (
     <div
       className={cn(
-        "flex gap-3 p-4 rounded-lg shadow-[var(--shadow-message)] animate-in fade-in-0 slide-in-from-bottom-2 duration-300",
+        "flex gap-3 p-4 rounded-xl shadow-[var(--shadow-message)] animate-in fade-in-0 slide-in-from-bottom-2 duration-300 backdrop-blur-sm border",
         isUser
-          ? "bg-[hsl(var(--chat-user-bg))] text-[hsl(var(--chat-user-fg))] ml-auto max-w-[85%]"
-          : "bg-[hsl(var(--chat-ai-bg))] text-[hsl(var(--chat-ai-fg))] mr-auto max-w-[90%] border border-border"
+          ? "bg-[hsl(var(--chat-user-bg))]/90 text-[hsl(var(--chat-user-fg))] ml-auto max-w-[85%] border-primary/30"
+          : "bg-[hsl(var(--chat-ai-bg))]/80 text-[hsl(var(--chat-ai-fg))] mr-auto max-w-[90%] border-border/50"
       )}
     >
       <div className="flex-shrink-0 mt-1">
         {isUser ? (
-          <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-            <User className="w-5 h-5" />
+          <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center border border-primary/20">
+            <User className="w-5 h-5 relative z-10" />
+            <div className="absolute inset-0 rounded-full bg-primary/10 animate-pulse" />
           </div>
         ) : (
-          <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-            <Bot className="w-5 h-5 text-accent" />
+          <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-accent/20 to-[hsl(var(--dragon-gold))]/20 flex items-center justify-center border border-accent/30">
+            <Bot className="w-5 h-5 text-accent relative z-10" />
+            <div className="absolute inset-0 rounded-full bg-accent/5 animate-pulse" />
           </div>
         )}
       </div>

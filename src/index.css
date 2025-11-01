@@ -8,85 +8,105 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 100% 98%;
-    --foreground: 217 85% 15%;
+    /* Dragon Fantasy Theme - Light Mode (Sunset/Dusk) */
+    --background: 25 30% 92%;
+    --foreground: 0 0% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 217 85% 15%;
+    --card: 30 25% 96%;
+    --card-foreground: 0 0% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 217 85% 15%;
+    --popover: 30 25% 98%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 217 85% 35%;
-    --primary-foreground: 210 100% 98%;
+    --primary: 160 60% 35%; /* Deep Emerald */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 100% 95%;
-    --secondary-foreground: 217 85% 35%;
+    --secondary: 30 40% 85%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 217 30% 45%;
+    --muted: 30 20% 88%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 190 85% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 15 85% 55%; /* Fiery Orange-Red */
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 20% 88%;
-    --input: 217 20% 90%;
-    --ring: 217 85% 35%;
+    --border: 25 20% 80%;
+    --input: 25 20% 85%;
+    --ring: 160 60% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom tokens for chat app */
-    --chat-user-bg: 217 85% 35%;
-    --chat-user-fg: 210 100% 98%;
-    --chat-ai-bg: 0 0% 100%;
-    --chat-ai-fg: 217 85% 15%;
+    /* Dragon Theme Custom Tokens */
+    --dragon-scale: 160 40% 30%; /* Dark emerald for scale patterns */
+    --dragon-fire: 15 85% 55%; /* Fiery glow */
+    --dragon-gold: 45 90% 60%; /* Metallic gold accents */
+    --dragon-smoke: 0 0% 50%; /* Smoke/mist effect */
     
-    --gradient-header: linear-gradient(135deg, hsl(217 85% 35%), hsl(217 85% 45%));
-    --shadow-card: 0 2px 8px -1px hsl(217 85% 35% / 0.1);
-    --shadow-message: 0 1px 3px hsl(217 20% 60% / 0.15);
+    --chat-user-bg: 160 60% 35%;
+    --chat-user-fg: 0 0% 98%;
+    --chat-ai-bg: 30 25% 96%;
+    --chat-ai-fg: 0 0% 15%;
+    
+    --gradient-header: linear-gradient(135deg, hsl(160 60% 25%), hsl(15 85% 45%));
+    --gradient-dragon: linear-gradient(135deg, hsl(160 50% 20%), hsl(0 0% 10%));
+    --gradient-fire: linear-gradient(90deg, hsl(15 85% 55%), hsl(30 95% 60%));
+    
+    --shadow-card: 0 4px 16px -2px hsl(0 0% 0% / 0.2), 0 0 30px -10px hsl(15 85% 55% / 0.3);
+    --shadow-message: 0 2px 8px hsl(0 0% 0% / 0.15), 0 0 20px -8px hsl(160 60% 35% / 0.2);
+    --shadow-glow: 0 0 40px hsl(15 85% 55% / 0.4), 0 0 80px hsl(15 85% 55% / 0.2);
   }
 
   .dark {
-    --background: 217 85% 8%;
-    --foreground: 210 100% 98%;
+    /* Dragon Fantasy Theme - Dark Mode (Night/Mystery) */
+    --background: 0 0% 8%; /* Obsidian black */
+    --foreground: 0 0% 95%;
 
-    --card: 217 70% 12%;
-    --card-foreground: 210 100% 98%;
+    --card: 0 0% 12%; /* Dark stone */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 217 70% 12%;
-    --popover-foreground: 210 100% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 217 85% 45%;
-    --primary-foreground: 210 100% 98%;
+    --primary: 160 65% 45%; /* Glowing Emerald */
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 217 50% 20%;
-    --secondary-foreground: 210 100% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 217 50% 20%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 190 85% 50%;
-    --accent-foreground: 217 85% 8%;
+    --accent: 15 90% 60%; /* Fiery glow brighter in dark */
+    --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 40% 25%;
-    --input: 217 40% 25%;
-    --ring: 217 85% 45%;
+    --border: 160 30% 25%; /* Emerald-tinted borders */
+    --input: 0 0% 20%;
+    --ring: 160 65% 45%;
     
-    /* Custom tokens for chat app dark mode */
-    --chat-user-bg: 217 85% 40%;
-    --chat-user-fg: 210 100% 98%;
-    --chat-ai-bg: 217 70% 15%;
-    --chat-ai-fg: 210 100% 98%;
+    /* Dragon Theme Custom Tokens - Dark Mode Enhanced */
+    --dragon-scale: 160 50% 25%; /* Glowing scale patterns */
+    --dragon-fire: 15 90% 60%; /* Brighter fire glow */
+    --dragon-gold: 45 95% 65%; /* Bright metallic gold */
+    --dragon-smoke: 0 0% 30%; /* Lighter smoke for contrast */
     
-    --gradient-header: linear-gradient(135deg, hsl(217 85% 25%), hsl(217 85% 35%));
-    --shadow-card: 0 4px 12px -2px hsl(0 0% 0% / 0.3);
-    --shadow-message: 0 2px 4px hsl(0 0% 0% / 0.2);
+    --chat-user-bg: 160 60% 30%;
+    --chat-user-fg: 0 0% 98%;
+    --chat-ai-bg: 0 0% 15%;
+    --chat-ai-fg: 0 0% 95%;
+    
+    --gradient-header: linear-gradient(135deg, hsl(160 50% 20%), hsl(15 85% 35%));
+    --gradient-dragon: linear-gradient(135deg, hsl(160 40% 15%), hsl(0 0% 8%));
+    --gradient-fire: linear-gradient(90deg, hsl(15 90% 60%), hsl(30 95% 65%));
+    
+    --shadow-card: 0 8px 32px -4px hsl(0 0% 0% / 0.6), 0 0 60px -10px hsl(15 90% 60% / 0.4);
+    --shadow-message: 0 4px 16px hsl(0 0% 0% / 0.4), 0 0 30px -8px hsl(160 65% 45% / 0.3);
+    --shadow-glow: 0 0 60px hsl(15 90% 60% / 0.5), 0 0 120px hsl(15 90% 60% / 0.3);
   }
 }
 
