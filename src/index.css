@@ -8,105 +8,115 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dragon Fantasy Theme - Light Mode (Sunset/Dusk) */
-    --background: 25 30% 92%;
-    --foreground: 0 0% 15%;
+    /* Dragon Fantasy Theme - Light Mode (Ancient Kingdom Dawn) */
+    --background: 30 15% 12%; /* Dark stone castle */
+    --foreground: 45 35% 92%; /* Warm parchment text */
 
-    --card: 30 25% 96%;
-    --card-foreground: 0 0% 15%;
+    --card: 30 15% 18%; /* Aged dark metal */
+    --card-foreground: 45 30% 88%;
 
-    --popover: 30 25% 98%;
-    --popover-foreground: 0 0% 15%;
+    --popover: 30 15% 16%;
+    --popover-foreground: 45 30% 88%;
 
-    --primary: 160 60% 35%; /* Deep Emerald */
-    --primary-foreground: 0 0% 98%;
+    --primary: 160 50% 40%; /* Ancient Emerald */
+    --primary-foreground: 45 40% 95%;
 
-    --secondary: 30 40% 85%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 30 20% 25%; /* Bronze metal */
+    --secondary-foreground: 45 40% 90%;
 
-    --muted: 30 20% 88%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 30 10% 30%;
+    --muted-foreground: 45 15% 60%;
 
-    --accent: 15 85% 55%; /* Fiery Orange-Red */
-    --accent-foreground: 0 0% 98%;
+    --accent: 5 75% 50%; /* Deep Crimson Fire */
+    --accent-foreground: 45 40% 95%;
 
     --destructive: 0 75% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 40% 95%;
 
-    --border: 25 20% 80%;
-    --input: 25 20% 85%;
-    --ring: 160 60% 35%;
+    --border: 45 25% 35%; /* Burnt gold borders */
+    --input: 30 15% 22%;
+    --ring: 45 70% 55%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    /* Dragon Theme Custom Tokens */
-    --dragon-scale: 160 40% 30%; /* Dark emerald for scale patterns */
-    --dragon-fire: 15 85% 55%; /* Fiery glow */
-    --dragon-gold: 45 90% 60%; /* Metallic gold accents */
-    --dragon-smoke: 0 0% 50%; /* Smoke/mist effect */
+    /* Dragon Theme Custom Tokens - Ancient Kingdom */
+    --dragon-scale: 160 40% 25%; /* Dark emerald scales */
+    --dragon-fire: 5 80% 55%; /* Molten fire */
+    --dragon-gold: 45 85% 55%; /* Ancient gold */
+    --dragon-bronze: 30 50% 35%; /* Aged bronze */
+    --dragon-smoke: 0 0% 25%; /* Dark mist */
+    --dragon-rune: 160 60% 45%; /* Glowing runes */
     
-    --chat-user-bg: 160 60% 35%;
-    --chat-user-fg: 0 0% 98%;
-    --chat-ai-bg: 30 25% 96%;
-    --chat-ai-fg: 0 0% 15%;
+    --chat-user-bg: 160 45% 25%; /* Dark emerald message */
+    --chat-user-fg: 45 35% 92%;
+    --chat-ai-bg: 30 20% 20%; /* Stone panel */
+    --chat-ai-fg: 45 30% 88%;
     
-    --gradient-header: linear-gradient(135deg, hsl(160 60% 25%), hsl(15 85% 45%));
-    --gradient-dragon: linear-gradient(135deg, hsl(160 50% 20%), hsl(0 0% 10%));
-    --gradient-fire: linear-gradient(90deg, hsl(15 85% 55%), hsl(30 95% 60%));
+    --gradient-header: linear-gradient(135deg, hsl(160 40% 18%) 0%, hsl(30 30% 15%) 50%, hsl(5 60% 25%) 100%);
+    --gradient-dragon: linear-gradient(135deg, hsl(160 35% 15%), hsl(30 20% 12%), hsl(0 0% 8%));
+    --gradient-fire: linear-gradient(90deg, hsl(5 80% 50%), hsl(25 90% 55%), hsl(45 85% 55%));
+    --gradient-metal: linear-gradient(135deg, hsl(30 40% 25%), hsl(45 60% 40%), hsl(30 40% 25%));
     
-    --shadow-card: 0 4px 16px -2px hsl(0 0% 0% / 0.2), 0 0 30px -10px hsl(15 85% 55% / 0.3);
-    --shadow-message: 0 2px 8px hsl(0 0% 0% / 0.15), 0 0 20px -8px hsl(160 60% 35% / 0.2);
-    --shadow-glow: 0 0 40px hsl(15 85% 55% / 0.4), 0 0 80px hsl(15 85% 55% / 0.2);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.7), 0 0 60px -15px hsl(5 80% 50% / 0.4), inset 0 1px 2px hsl(45 60% 50% / 0.1);
+    --shadow-message: 0 4px 16px hsl(0 0% 0% / 0.5), 0 0 30px -10px hsl(160 50% 40% / 0.3);
+    --shadow-glow: 0 0 60px hsl(5 80% 50% / 0.6), 0 0 120px hsl(5 80% 50% / 0.3);
+    --shadow-glow-green: 0 0 40px hsl(160 60% 45% / 0.5), 0 0 80px hsl(160 60% 45% / 0.25);
+    --shadow-emboss: inset 0 2px 4px hsl(0 0% 0% / 0.3), inset 0 -1px 2px hsl(45 70% 60% / 0.2);
   }
 
   .dark {
-    /* Dragon Fantasy Theme - Dark Mode (Night/Mystery) */
-    --background: 0 0% 8%; /* Obsidian black */
-    --foreground: 0 0% 95%;
+    /* Dragon Fantasy Theme - Dark Mode (Ancient Night) */
+    --background: 0 0% 6%; /* Deep obsidian */
+    --foreground: 45 30% 90%;
 
-    --card: 0 0% 12%; /* Dark stone */
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 10%; /* Midnight stone */
+    --card-foreground: 45 25% 85%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 45 25% 85%;
 
-    --primary: 160 65% 45%; /* Glowing Emerald */
-    --primary-foreground: 0 0% 10%;
+    --primary: 160 70% 50%; /* Bright emerald glow */
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 30 20% 18%; /* Dark bronze */
+    --secondary-foreground: 45 30% 88%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 45 10% 60%;
 
-    --accent: 15 90% 60%; /* Fiery glow brighter in dark */
-    --accent-foreground: 0 0% 10%;
+    --accent: 5 85% 60%; /* Bright fire */
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 80% 55%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 45 35% 95%;
 
-    --border: 160 30% 25%; /* Emerald-tinted borders */
-    --input: 0 0% 20%;
-    --ring: 160 65% 45%;
+    --border: 45 30% 30%; /* Golden borders */
+    --input: 0 0% 14%;
+    --ring: 160 70% 50%;
     
     /* Dragon Theme Custom Tokens - Dark Mode Enhanced */
-    --dragon-scale: 160 50% 25%; /* Glowing scale patterns */
-    --dragon-fire: 15 90% 60%; /* Brighter fire glow */
-    --dragon-gold: 45 95% 65%; /* Bright metallic gold */
-    --dragon-smoke: 0 0% 30%; /* Lighter smoke for contrast */
+    --dragon-scale: 160 55% 30%; /* Glowing scales */
+    --dragon-fire: 5 90% 65%; /* Intense fire */
+    --dragon-gold: 45 95% 60%; /* Brilliant gold */
+    --dragon-bronze: 30 60% 40%; /* Bright bronze */
+    --dragon-smoke: 0 0% 20%; /* Shadow mist */
+    --dragon-rune: 160 70% 55%; /* Bright runes */
     
-    --chat-user-bg: 160 60% 30%;
-    --chat-user-fg: 0 0% 98%;
-    --chat-ai-bg: 0 0% 15%;
-    --chat-ai-fg: 0 0% 95%;
+    --chat-user-bg: 160 50% 22%;
+    --chat-user-fg: 45 30% 92%;
+    --chat-ai-bg: 0 0% 12%;
+    --chat-ai-fg: 45 25% 88%;
     
-    --gradient-header: linear-gradient(135deg, hsl(160 50% 20%), hsl(15 85% 35%));
-    --gradient-dragon: linear-gradient(135deg, hsl(160 40% 15%), hsl(0 0% 8%));
-    --gradient-fire: linear-gradient(90deg, hsl(15 90% 60%), hsl(30 95% 65%));
+    --gradient-header: linear-gradient(135deg, hsl(160 45% 18%) 0%, hsl(30 25% 12%) 50%, hsl(5 70% 30%) 100%);
+    --gradient-dragon: linear-gradient(135deg, hsl(160 40% 12%), hsl(30 15% 8%), hsl(0 0% 5%));
+    --gradient-fire: linear-gradient(90deg, hsl(5 90% 60%), hsl(25 95% 65%), hsl(45 90% 60%));
+    --gradient-metal: linear-gradient(135deg, hsl(30 45% 22%), hsl(45 70% 45%), hsl(30 45% 22%));
     
-    --shadow-card: 0 8px 32px -4px hsl(0 0% 0% / 0.6), 0 0 60px -10px hsl(15 90% 60% / 0.4);
-    --shadow-message: 0 4px 16px hsl(0 0% 0% / 0.4), 0 0 30px -8px hsl(160 65% 45% / 0.3);
-    --shadow-glow: 0 0 60px hsl(15 90% 60% / 0.5), 0 0 120px hsl(15 90% 60% / 0.3);
+    --shadow-card: 0 12px 48px hsl(0 0% 0% / 0.8), 0 0 80px -15px hsl(5 90% 60% / 0.5), inset 0 1px 2px hsl(45 70% 55% / 0.15);
+    --shadow-message: 0 6px 24px hsl(0 0% 0% / 0.6), 0 0 40px -10px hsl(160 70% 50% / 0.4);
+    --shadow-glow: 0 0 80px hsl(5 90% 60% / 0.7), 0 0 160px hsl(5 90% 60% / 0.4);
+    --shadow-glow-green: 0 0 60px hsl(160 70% 55% / 0.6), 0 0 120px hsl(160 70% 55% / 0.3);
+    --shadow-emboss: inset 0 2px 4px hsl(0 0% 0% / 0.4), inset 0 -1px 2px hsl(45 80% 65% / 0.25);
   }
 }
 
@@ -117,5 +127,55 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 8px hsl(0 0% 0% / 0.5);
+  }
+  
+  /* Dragon scale pattern background */
+  .dragon-scales {
+    background-image: url('/src/assets/dragon-scales-texture.jpg');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+  }
+  
+  /* Rune glow animation */
+  @keyframes rune-pulse {
+    0%, 100% {
+      text-shadow: 0 0 10px hsl(var(--dragon-rune) / 0.5), 0 0 20px hsl(var(--dragon-rune) / 0.3);
+    }
+    50% {
+      text-shadow: 0 0 20px hsl(var(--dragon-rune) / 0.8), 0 0 40px hsl(var(--dragon-rune) / 0.4);
+    }
+  }
+  
+  /* Ember particles animation */
+  @keyframes ember-float {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) translateX(20px);
+      opacity: 0;
+    }
+  }
+  
+  /* Molten glow effect */
+  @keyframes molten-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--dragon-fire) / 0.3), inset 0 0 10px hsl(var(--dragon-fire) / 0.2);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--dragon-fire) / 0.5), inset 0 0 20px hsl(var(--dragon-fire) / 0.3);
+    }
   }
 }
