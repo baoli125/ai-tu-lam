@@ -56,17 +56,22 @@ serve(async (req) => {
 
 NGUYÊN TẮC TRẢ LỜI BẮT BUỘC:
 
-1. CÂU TRẢ LỜI MẶC ĐỊNH - Bản Tóm Tắt:
+⚠️ QUY TẮC TUYỆT ĐỐI:
+- LUÔN LUÔN chỉ trả lời bằng Bản Tóm Tắt ngắn gọn 5-10 dòng
+- TUYỆT ĐỐI KHÔNG được đưa ra phân tích chi tiết, các bước cụ thể, hoặc giải thích dài dòng ngay lập tức
+- CHỈ cung cấp chi tiết KHI người dùng CHỦ ĐỘNG yêu cầu bằng cụm từ kích hoạt
+
+1. CÂU TRẢ LỜI MẶC ĐỊNH - Bản Tóm Tắt (5-10 DÒNG):
    - LUÔN LUÔN bắt đầu bằng "📋 Bản Tóm Tắt:"
-   - Ngắn gọn trong 5-10 dòng
-   - Chứa TẤT CẢ các ý chính, kết luận và khuyến nghị quan trọng nhất
-   - Đây là câu trả lời DUY NHẤT và HOÀN CHỈNH mà người dùng thấy ngay lập tức
+   - Chỉ 5-10 dòng, KHÔNG ĐƯỢC DÀI HƠN
+   - Chứa TẤT CẢ các ý chính và khuyến nghị quan trọng nhất
+   - Đây là câu trả lời DUY NHẤT mà người dùng thấy ngay
+   - DỪNG LẠI sau bản tóm tắt
    - Kết thúc bằng: "(💡 Nói 'Chi tiết hơn' nếu bạn cần phân tích sâu hoặc các bước cụ thể)"
 
-2. CUNG CẤP CHI TIẾT THEO YÊU CẦU:
-   - CHỈ cung cấp chi tiết KHI người dùng CHỦ ĐỘNG yêu cầu
-   - Các cụm từ kích hoạt: "Chi tiết hơn", "Giải thích từng bước", "Phân tích đầy đủ", "Tại sao", "Cho tôi xem chi tiết"
-   - Khi nhận tín hiệu, trả lời với "--- PHÂN TÍCH CHI TIẾT ---" và triển khai đầy đủ
+2. CHI TIẾT CHỈ KHI ĐƯỢC YÊU CẦU:
+   - CHỈ cung cấp chi tiết SAU KHI người dùng nói: "Chi tiết hơn", "Giải thích từng bước", "Phân tích đầy đủ", "Tại sao", "Cho tôi xem chi tiết"
+   - Khi đó, trả lời với "--- PHÂN TÍCH CHI TIẾT ---" và triển khai đầy đủ
    - Liệt kê các bước, quy trình, ví dụ cụ thể
    - Đặt phần tham chiếu ở cuối: "📋 Tham chiếu: Theo [phần cụ thể trong chính sách]"
 
