@@ -2,11 +2,21 @@ import { useEffect, useRef } from "react";
 import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { usePolicyChat } from "@/hooks/usePolicyChat";
-import { FileText, Shield } from "lucide-react";
+import { FileText, Shield, Download, Info } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const { messages, isLoading, sendMessage } = usePolicyChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CIRT-Policy.pdf";
+    link.download = "CIRT-Policy-ABC-Bank.pdf";
+    link.click();
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -21,15 +31,42 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-10 border-b border-border bg-card shadow-[var(--shadow-card)]">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <Shield className="w-6 h-6 text-primary-foreground" />
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <Shield className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-xl font-bold text-foreground">Trợ lý Chính sách CIRT</h1>
+                  <Badge variant="secondary" className="text-xs">Lab 8</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  Ngân hàng Tín dụng ABC
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">Trợ lý Chính sách CIRT</h1>
-              <p className="text-sm text-muted-foreground">
-                Hỏi đáp về chính sách Ứng phó Sự cố Máy tính
-              </p>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleDownload}
+                className="gap-2"
+              >
+                <Download className="w-4 h-4" />
+                <span className="hidden sm:inline">PDF</span>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="gap-2"
+              >
+                <Link to="/about">
+                  <Info className="w-4 h-4" />
+                  <span className="hidden sm:inline">Giới thiệu</span>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
