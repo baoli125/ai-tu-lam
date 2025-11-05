@@ -18,6 +18,52 @@ const parseMarkdownBold = (text: string) => {
   });
 };
 
+const parseContent = (content: string) => {
+  const lines = content.split('\n');
+  const elements: JSX.Element[] = [];
+  let bulletItems: string[] = [];
+  
+  lines.forEach((line, index) => {
+    const trimmedLine = line.trim();
+    
+    if (trimmedLine.startsWith('* ')) {
+      bulletItems.push(trimmedLine.slice(2));
+    } else {
+      if (bulletItems.length > 0) {
+        elements.push(
+          <ul key={`ul-${index}`} className="list-disc list-inside space-y-1 my-2">
+            {bulletItems.map((item, i) => (
+              <li key={i}>{parseMarkdownBold(item)}</li>
+            ))}
+          </ul>
+        );
+        bulletItems = [];
+      }
+      
+      if (trimmedLine || index === 0) {
+        elements.push(
+          <span key={`line-${index}`}>
+            {parseMarkdownBold(line)}
+            {index < lines.length - 1 && '\n'}
+          </span>
+        );
+      }
+    }
+  });
+  
+  if (bulletItems.length > 0) {
+    elements.push(
+      <ul key="ul-end" className="list-disc list-inside space-y-1 my-2">
+        {bulletItems.map((item, i) => (
+          <li key={i}>{parseMarkdownBold(item)}</li>
+        ))}
+      </ul>
+    );
+  }
+  
+  return elements;
+};
+
 export const ChatMessage = ({ role, content }: ChatMessageProps) => {
   const isUser = role === "user";
 
@@ -42,9 +88,9 @@ export const ChatMessage = ({ role, content }: ChatMessageProps) => {
         )}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
-          {parseMarkdownBold(content)}
-        </p>
+        <div className="text-sm leading-relaxed whitespace-pre-wrap break-words">
+          {parseContent(content)}
+        </div>
       </div>
     </div>
   );
