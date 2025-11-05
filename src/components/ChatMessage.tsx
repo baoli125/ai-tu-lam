@@ -6,6 +6,18 @@ interface ChatMessageProps {
   content: string;
 }
 
+const parseMarkdownBold = (text: string) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      const boldText = part.slice(2, -2);
+      return <strong key={index}>{boldText}</strong>;
+    }
+    return part;
+  });
+};
+
 export const ChatMessage = ({ role, content }: ChatMessageProps) => {
   const isUser = role === "user";
 
@@ -30,7 +42,9 @@ export const ChatMessage = ({ role, content }: ChatMessageProps) => {
         )}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">{content}</p>
+        <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">
+          {parseMarkdownBold(content)}
+        </p>
       </div>
     </div>
   );
