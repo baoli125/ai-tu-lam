@@ -56,8 +56,8 @@ VALUES (
   'v1.0 - Original CIRT Policy',
   'Lab 8 - Nhóm 10
 Thành viên:
-- Nguyễn Tiến Thảo - SE180588
-- Nguyễn Hồng Quang - SE180641
+- Nguyễn Hoàng Phúc Bảo - SE180642
+- Lê Gia Thiên - SE180588
 Phần 1:
 Quy trình xử lý sự cố tại công ty TNHH Công Nghệ TechCorp được thiết kế để đảm bảo rằng mọi sự cố bảo mật được phát hiện, phản ứng và khắc phục một cách nhanh chóng và hiệu quả. Quy trình này không chỉ giúp giảm thiểu tác động của các sự cố mà còn đảm bảo rằng các biện pháp phòng ngừa được triển khai để ngăn chặn các sự cố tương tự trong tương lai.
 
